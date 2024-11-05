@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a neat little pong game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="console.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts.css">
+</head>
+<body class="bg-black space-mono-regular text-white">
+    <div id="imgdiv" class="absolute top-0 left-0 h-full w-full -z-10 bg-center bg-fixed bg-cover"></div>
+    <!-- loading div -->
+    <div id="loading" class="bg-black absolute top-0 left-0 w-full h-full z-50">
+        <div class="flex justify-center items-center h-screen">
+            <div class="text-white text-2xl">Loading...</div>
+        </div>
+    </div>
+    <!-- prelaunch -->
+    <div id="thebutton" class="flex flex-col justify-center items-center h-screen">
+        <button onclick="unhideConsole()" class="m-2 rounded-xl border-red-600 px-4 py-2 border-2 border-spacing-8 hover:bg-red-600">
+            start
+        </button><br>
+
+        <div class="flex flex-col absolute bottom-10">
+            <p class="text-gray-400">a bit of basic cryptography/encodings knowledge is necessary</p>
+            <p class="text-gray-400">PLAY ON DESKTOP! this game uses fullscreen. enjoy!</p>
+        </div>
+    </div>
+    <!-- 3 letter name entry -->
+    <div id="game" class="hidden bg-transparent">
+        <div id="namentry" class="bg-transparent">
+            <h3 class="absolute top-[25%] right-[17%] text-5xl text-green-600 -skew-x-6" style="background-color: transparent; text-shadow: 0 0 10px green, 0 0 20px green, 0 0 30px green;">ENTER NAME:</h3>
+            <h3 id="namespot" class="absolute top-[35%] right-[17.5%] text-6xl text-green-600 -skew-x-6" style="background-color: transparent; text-shadow: 0 0 10px green, 0 0 20px green, 0 0 30px green;">_____</h3>
+        </div>
+        <div id="qas" class="hidden">
+            <h3 class="absolute top-[23%] right-[16%] text-2xl text-green-600 -skew-x-12 -rotate-1" style="background-color: transparent; text-shadow: 0 0 10px green, 0 0 20px green, 0 0 30px green;">QUICK ANSWER SYSTEM © 1989</h3>
+            <h3 id="textentry" class="absolute top-[29%] right-[16%] text-2xl text-green-600 -skew-x-12 -rotate-1" style="background-color: transparent; text-shadow: 0 0 10px green, 0 0 20px green, 0 0 30px green;">{}: ____</h3>
+            <h3 id="textresponse" class="absolute whitespace-pre-line top-[40%] right-[16%] text-2xl text-green-600 -skew-x-12 -rotate-1 hidden" style="background-color: transparent; text-shadow: 0 0 10px green, 0 0 20px green, 0 0 30px green;">COMPUTER: </h3>
+        </div>
+    </div>
+    <!-- white dot in centre -->
+    <div id="dot" class="hidden bg-white absolute top-1/2 left-1/2 w-2 h-2 rounded-full"></div>
+    <!-- postgame -->
+    <div id="postgame" class="hidden">
+        <div class="bg-black absolute top-0 left-0 w-full h-full z-50">
+            <div class="flex flex-col justify-center items-center h-screen">
+                <p class="text-white text-2xl">thanks for playing this little webtoy thing</p>
+                <p class="text-white text-2xl">made in around 6 1/2 hours</p>
+                <p class="text-white text-2xl">tailwindcss</p>
+                <p class="text-white text-2xl">🏴‍☠️🏴‍☠️🏴‍☠️</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

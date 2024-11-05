@@ -1,0 +1,93 @@
+.ubuntu-mono-regular {
+font-family: "Ubuntu Mono", serif;
+font-weight: 400;
+font-style: normal;
+}
+
+.ubuntu-mono-bold {
+font-family: "Ubuntu Mono", serif;
+font-weight: 700;
+font-style: normal;
+}
+
+.ubuntu-mono-regular-italic {
+font-family: "Ubuntu Mono", serif;
+font-weight: 400;
+font-style: italic;
+}
+
+.ubuntu-mono-bold-italic {
+font-family: "Ubuntu Mono", serif;
+font-weight: 700;
+font-style: italic;
+}
+
+.jetbrains-mono-regular> {
+font-family: "JetBrains Mono", serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+}
+.space-mono-regular {
+font-family: "Space Mono", monospace;
+font-weight: 400;
+font-style: normal;
+}
+
+.space-mono-bold {
+font-family: "Space Mono", monospace;
+font-weight: 700;
+font-style: normal;
+}
+
+.space-mono-regular-italic {
+font-family: "Space Mono", monospace;
+font-weight: 400;
+font-style: italic;
+}
+
+.space-mono-bold-italic {
+font-family: "Space Mono", monospace;
+font-weight: 700;
+font-style: italic;
+}
+
+@keyframes scaleYDown {
+    from {
+      transform: scaleY(1);
+      filter: brightness(1);
+    }
+    to {
+      transform: scaleY(0.01);
+      filter: brightness(2);
+    }
+  }
+
+@keyframes scaleXDown {
+    from {
+      transform: scaleX(1) scaleY(0.01);
+      filter: brightness(2);
+    }
+    to {
+      transform: scaleX(0.01) scaleY(0.01);
+      filter: brightness(4);
+    }
+  }
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.01);
+    }
+    to {
+        transform: scale(3);
+    }
+}
+
+@keyframes scaleDown {
+    from {
+        transform: scale(3);
+    }
+    to {
+        transform: scale(0.01);
+    }
+}
